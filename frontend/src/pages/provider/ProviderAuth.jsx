@@ -78,6 +78,9 @@ const ProviderAuth = () => {
         throw new Error('This account is not registered as a service provider');
       }
       
+      // Track successful login
+      trackLogin('provider');
+      
       // Store user data
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('userType', 'provider');
