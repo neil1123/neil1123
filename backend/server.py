@@ -260,7 +260,7 @@ async def root():
 # ====== AUTHENTICATION ENDPOINTS ======
 
 @api_router.post("/auth/register", response_model=Token)
-async def register(user_data: UserCreate):
+async def register(user_data: UserCreate, request: Request):
     # Check if user already exists
     existing_user = await db.users.find_one({"email": user_data.email})
     if existing_user:
