@@ -329,6 +329,12 @@ async def login(user_credentials: UserLogin, request: Request):
     # Create access token
     access_token = create_access_token(data={"sub": user.id})
     
+    # Track login event
+    await request.app.state.analytics.track_login(
+        client_id=user.id,
+        user_type=user.user_type
+    )
+    
     # Return user data without password
     user_data_return = user.dict()
     del user_data_return["password_hash"]
