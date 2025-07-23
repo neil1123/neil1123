@@ -458,6 +458,11 @@ const ProviderDashboard = () => {
                 </CardContent>
               </Card>
             </div>
+
+            {/* Comprehensive Analytics Dashboard */}
+            <div className="mt-8">
+              <ProviderAnalyticsDashboard />
+            </div>
           </div>
         </div>
       </div>
