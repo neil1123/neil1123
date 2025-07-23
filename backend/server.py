@@ -314,7 +314,7 @@ async def register(user_data: UserCreate, request: Request):
     }
 
 @api_router.post("/auth/login", response_model=Token)
-async def login(user_credentials: UserLogin):
+async def login(user_credentials: UserLogin, request: Request):
     # Find user
     user_doc = await db.users.find_one({"email": user_credentials.email})
     if not user_doc:
