@@ -82,6 +82,9 @@ const HomeownerAuth = () => {
         address: signUpData.address
       });
       
+      // Track successful signup
+      trackSignup('homeowner', 'email');
+      
       setIsLoading(false);
       navigate('/homeowners/dashboard');
     } catch (error) {
