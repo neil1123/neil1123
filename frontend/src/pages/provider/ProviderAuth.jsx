@@ -138,6 +138,9 @@ const ProviderAuth = () => {
       
       console.log('Registration response:', response);
       
+      // Track successful signup
+      trackSignup('provider', 'email');
+      
       // Store user data
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('userType', 'provider');
