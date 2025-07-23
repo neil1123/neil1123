@@ -14,7 +14,7 @@ import jwt
 from passlib.context import CryptContext
 import hashlib
 import ssl
-from analytics_service import AnalyticsService
+from .analytics_service import AnalyticsService
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
