@@ -7,6 +7,7 @@ import { Label } from '../../components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import apiService from '../../services/api';
+import { trackSignup, trackLogin } from '../../services/analytics';
 
 const HomeownerAuth = () => {
   const navigate = useNavigate();
