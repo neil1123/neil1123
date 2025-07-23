@@ -2,7 +2,7 @@ import os
 import asyncio
 from datetime import datetime
 from typing import Dict, Any, Optional
-from ga4mp import Ga4mp
+from ga4mp import GtagMP
 import logging
 from motor.motor_asyncio import AsyncIOMotorDatabase
 
@@ -21,7 +21,7 @@ class AnalyticsService:
         
         # Initialize GA4 client
         if self.measurement_id and self.api_secret:
-            self.ga4 = Ga4mp(
+            self.ga4 = GtagMP(
                 measurement_id=self.measurement_id,
                 api_secret=self.api_secret
             )
