@@ -296,6 +296,13 @@ async def register(user_data: UserCreate, request: Request):
     # Create access token
     access_token = create_access_token(data={"sub": user.id})
     
+    # Track signup event
+    await request.app.state.analytics.track_signup(
+        client_id=user.id,
+        user_type=user.user_type,
+        signup_method="email"
+    )
+    
     # Return user data without password
     user_data_return = user.dict()
     del user_data_return["password_hash"]
