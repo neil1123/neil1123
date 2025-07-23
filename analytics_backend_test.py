@@ -15,7 +15,7 @@ import pymongo
 from pymongo import MongoClient
 
 # Load environment variables
-BACKEND_URL = "http://localhost:8001/api"
+BACKEND_URL = "http://localhost:8010/api"
 
 # Test credentials as specified in review request
 TEST_HOMEOWNER_EMAIL = "test@homeowner.com"
