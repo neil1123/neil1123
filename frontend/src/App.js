@@ -25,6 +25,10 @@ import ProviderProfileManagement from "./pages/provider/ProviderProfileManagemen
 import ProviderAuth from "./pages/provider/ProviderAuth";
 import ProviderAnalytics from "./pages/provider/ProviderAnalytics";
 
+// Import analytics
+import usePageTracking from "./hooks/usePageTracking";
+import { trackLandingView } from "./services/analytics";
+
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
