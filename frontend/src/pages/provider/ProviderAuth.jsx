@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/ta
 import { Checkbox } from '../../components/ui/checkbox';
 import { serviceCategories } from '../../data/mockData';
 import apiService from '../../services/api';
+import { trackSignup, trackLogin } from '../../services/analytics';
 
 const ProviderAuth = () => {
   const navigate = useNavigate();
