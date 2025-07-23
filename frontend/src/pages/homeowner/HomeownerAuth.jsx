@@ -43,6 +43,9 @@ const HomeownerAuth = () => {
       // Check user type and navigate accordingly
       const userType = response.user.user_type;
       
+      // Track successful login
+      trackLogin(userType);
+      
       if (userType === 'homeowner') {
         navigate('/homeowners/dashboard');
       } else if (userType === 'provider') {
