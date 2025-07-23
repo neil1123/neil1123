@@ -21,6 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/ca
 import { Badge } from '../../components/ui/badge';
 import { Avatar, AvatarFallback } from '../../components/ui/avatar';
 import NotificationBadge from '../../components/NotificationBadge';
+import ProviderAnalyticsDashboard from '../../components/ProviderAnalyticsDashboard';
 import { STANDARD_PROVIDER_SIDEBAR, handleStandardLogout } from '../../constants/providerSidebarConfig';
 
 const ProviderDashboard = () => {
