@@ -52,6 +52,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 24 * 60  # 24 hours
 # Create the main app without a prefix
 app = FastAPI(title="Doord API", description="Home Services Marketplace API")
 
+# Add analytics to app state for access in endpoints
+app.state.analytics = analytics
+
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
