@@ -33,6 +33,18 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 function App() {
+  // Initialize page tracking
+  usePageTracking();
+
+  // Track app initialization
+  useEffect(() => {
+    // Track landing on app start
+    const userType = localStorage.getItem('userType') || 'visitor';
+    trackLandingView(userType);
+    
+    console.log('🎯 Doord Analytics initialized');
+  }, []);
+
   // Clear localStorage cache on app initialization to prevent stale data
   useEffect(() => {
     // Clear all localStorage to prevent Wilson Home Services and other stale data
