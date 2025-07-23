@@ -41,6 +41,9 @@ client = AsyncIOMotorClient(
 )
 db = client[os.environ['DB_NAME']]
 
+# Initialize analytics service
+analytics = AnalyticsService(db)
+
 # JWT settings
 SECRET_KEY = "your-secret-key-change-this-in-production"
 ALGORITHM = "HS256"
